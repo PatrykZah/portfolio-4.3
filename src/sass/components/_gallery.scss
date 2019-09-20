@@ -1,0 +1,44 @@
+#s_gallery {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+	
+	> div {
+		background-position: center 0;
+		background-size: cover;
+		flex: 1 0 16.66%;
+		padding: 0;
+		padding-top: 16.66%; //ratio 1:1
+		position: relative;
+		
+		img {
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			height: 100%;
+			object-fit: cover;
+		}
+		
+		&:nth-child(5),
+		&:nth-child(6) {
+			flex-basis: 33.333%;
+			position: relative;
+		}
+	}
+	
+	@media (max-width: 768px) {
+		> div {
+			flex: 1 0 33.333%;
+			padding-top: 33.333%;
+		}
+
+		div:nth-child(5),
+		div:nth-child(6) {
+			flex-basis: 66.666%;
+			position: relative;
+		}
+	}
+}

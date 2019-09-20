@@ -1,0 +1,30 @@
+#s_stats {
+	margin-top: 50px;
+	margin-bottom: 50px;
+
+	div {
+		display: inline-block;
+		padding: 0;
+		margin: 30px 20px 50px 30px;
+		font-family: Verdana;
+		font-weight: bold;
+		font-size: 40pt;
+		color: $tlo1;
+		
+		p {
+			font-size: 15pt;
+			color: $hover;
+		}
+	}
+	
+	@media (max-width: 768px) {
+		display: inline-flex;
+		flex-wrap: wrap;
+		
+		> div {
+			flex: 1 0 40%;
+			margin: auto;
+		}
+	}
+  
+}

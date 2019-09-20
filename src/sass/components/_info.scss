@@ -1,0 +1,92 @@
+#s_info {
+  background-color: $tlo_info;
+  min-height: 200px;
+	
+	div {
+		display: inline-block;
+		margin: 40px 10px 40px 10px;
+		padding: 10px 0 10px 0;
+		width: 25%;
+		color: white;
+		font-family: Verdana;
+		font-size: 15pt;
+		font-weight: normal;
+		text-align: left;
+		vertical-align: top;
+	}
+
+	.d_title {
+		display: flex;
+		font-size: 15pt;
+		font-weight: bold;
+	
+		> hr {
+			margin: auto auto auto 10px;
+			display: block;
+			height: 2px;
+			flex: 1;
+			z-index: 1;
+		}
+	}
+
+
+	div div,
+	div span {
+		font-size: 10pt;
+		margin: 0;
+		width: 100%;
+		display: block;
+		font-family: Verdana;
+		display: flex
+	}
+	
+	@media (max-width: 768px) {
+		> div {
+			display: block;
+			width: auto;
+			margin: 0 5vw 0 5vw ;
+		}
+	}
+}
+
+.social_buttons {
+	display: flex !important;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	float: unset;
+	
+	i {
+		background-color: #4a6573;
+		margin: 5px;
+		width: 35px;
+		height: 35px;
+		padding: 7px;
+		font-size: 15pt;
+		text-align: center;
+	}
+	
+	.fas,
+	.fab {
+		transition: 0.5s;
+	}
+	
+	.fa-youtube:hover {
+		background-color: #d7281f;
+	}
+	.fa-google-plus-g:hover {
+		background-color: #d74a3d;
+	}
+	.fa-facebook-f:hover {
+		background-color: #4267b2;
+	}
+	.fa-basketball-ball:hover {
+		color: orange;
+	}
+	.fa-twitter:hover {
+		color: #53cff5;
+	}
+	.fa-camera-retro:hover {
+		color: black;
+	}
+	
+}

@@ -1,0 +1,58 @@
+#s_offert-2 {
+  margin: 3vw auto 0 auto;
+  display: inline-flex;
+  vertical-align: top;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+
+	.s_offert-2_container {
+		text-align: initial;
+		
+		> .text {
+			display: inline-block;
+			margin-top: 20px;
+			vertical-align: top;
+			width: 45%;
+			margin-right: 10px;
+		}
+
+		> .text:first-child {
+			width: 200px;
+		}
+	}
+
+	.tablet_gallery {
+		margin: 0 50px 50px auto;
+		min-width: 300px;
+		min-height: 300px;
+		display: inline-flex;
+		flex-wrap: wrap;
+		background: url("https://svgshare.com/i/AC5.svg");
+		background-size: contain;
+		background-repeat: no-repeat;
+		padding: 24px;
+		padding-bottom: 0;
+		filter: drop-shadow(40px 25px 4px black);
+		
+		> div {
+			position: relative;
+			flex: 0 0 33.3333%;
+			background-position: center 0;
+			background-size: cover;
+		}
+	}
+	
+	@media (max-width: 768px) {
+		flex-wrap: wrap;
+		
+		.s_offert-2_container {
+			margin-top: 50px;
+			text-align: center;
+		}
+		
+		.tablet_gallery {
+			margin: auto;
+		}
+	}
+}

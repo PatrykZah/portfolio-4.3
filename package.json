@@ -1,0 +1,40 @@
+{
+  "name": "portfolio-4.3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "globstar npm-run-all test:*",
+    "test:htm": "globstar nu-html-checker *.htm*",
+    "build": "npm-run-all build:* test",
+    "build:clean": "rimraf src/css/*",
+    "build:sass": "node-sass --output-style compact --source-map true -o src/css src/sass",
+    "build:autoprefixer": "autoprefixer-cli src/css/style.css",
+    "build-dev:sass": "node-sass --output-style expanded --source-map true -o src/css src/sass",
+    "watch": "npm-run-all build -p watch:*",
+    "watch:sassprefixer": "onchange \"src/sass/\" -- npm-run-all watch2:*",
+    "watch2:1": "node-sass --output-style expanded --source-map true -o src/css src/sass",
+    "watch2:2": "autoprefixer-cli src/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://patrykzah.github.io/portfolio-4.3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://patrykzah.github.io/portfolio-4.3/issues"
+  },
+  "homepage": "https://patrykzah.github.io/portfolio-4.3#readme",
+  "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.26.3",
+    "globstar": "^1.0.0",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "nu-html-checker": "^0.1.0",
+    "onchange": "^5.2.0",
+    "rimraf": "^2.6.3"
+  }
+}

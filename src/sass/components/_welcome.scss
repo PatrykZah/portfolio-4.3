@@ -1,0 +1,71 @@
+#s_welcome {
+	position: relative;
+  height: 400px;
+	margin-bottom: 100px;
+	
+	.carousel {
+		//height: 160px;
+
+		.carousel-cell {
+			> div {
+				height: 400px;
+				width: 100vw;
+				background-position: center 0;
+				background-size: cover;
+			}
+		}
+		
+		.flickity-page-dots {
+			bottom: 0;
+			
+			.dot {
+				padding: 10px;
+				margin: 20px;
+				opacity: 0.75;
+				background-color: grey;
+			}
+			
+			.is-selected {
+				opacity: 1;
+				background-color: white;
+			}
+		}
+		
+	}
+	
+	.progress-bar {
+		height: 20px;
+		width: 0;
+		background: #333;
+	}
+	
+	.text {
+		background-color: rgba(50, 50, 50, 0.7);
+		width: 350px;
+		float: right;
+		padding: 10px;
+		top: 50%;
+		position: relative;
+		transform: translate(0,-50%);
+	}
+
+
+	.slogan {
+		color: white;
+		text-align: left;
+		font-style: serif;
+		font-size: 15pt;
+		font-weight: 100;
+		
+		&:nth-child(2) {
+			font-weight: bold;
+		}
+	}
+
+	
+	@media (max-width: 768px) {
+		.text {
+			width: auto;
+		}
+	}
+}

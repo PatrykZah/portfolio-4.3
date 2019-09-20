@@ -1,0 +1,48 @@
+#nav {
+  width: 100%;
+  padding-bottom: 30px;
+  background-color: $tlo1;
+	
+	img {
+		margin: 40px 0 0 40px;
+		float: left;
+	}
+	
+	nav {
+		padding-top: 40px;
+		
+		a {
+			font-family: Verdana;
+			text-decoration: none;
+			display: inline-block;
+			color: white;
+			padding: 0;
+			width: 90px;
+			transition: all linear .3s;
+			
+			&:hover {
+				color: $hover;
+			}
+		}
+	}
+	
+	
+	@media (max-width: 768px) {
+		height: auto;
+		text-align: center;
+
+		img {
+			margin: 20px auto;
+			float: unset;
+		}
+
+		nav {
+			padding-top: 0;
+			
+			a {
+				display: block;
+				margin: 20px auto 20px auto;
+			}
+		}
+	}
+}
